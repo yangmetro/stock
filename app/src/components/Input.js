@@ -17,7 +17,7 @@ export default function Input(
                     </label>
                 </tr>
                 <button id = "run_button" onClick={run_function} className="button">
-                    Run
+                    Search
                 </button>
             </table>
         </div> 
