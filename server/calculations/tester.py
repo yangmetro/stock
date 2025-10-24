@@ -19,3 +19,4 @@ from mpl_toolkits.mplot3d import Axes3D
 fig = plt.figure(figsize=(10, 6))
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter(A[:, 0], A[:, 1], A[:, 2], c='r', marker='.')
+plt.savefig('tester.png')

@@ -1,4 +1,5 @@
 import {useEffect, useState } from 'react';
+import Axios from 'axios';
 import {finnhub_apikey} from './API_key.js' 
 import CompanyProfile from './components/CompanyProfile';
 import YourInput from './components/Input';
@@ -23,7 +24,6 @@ function App() {
             const finnhubClient = new finnhub.DefaultApi();
 
             finnhubClient.quote(ticker, (error, data, response) => {
-                console.log(data);
                 setPrice(data.c);
             });
             finnhubClient.companyProfile2({'symbol': ticker}, (error, data, response) => {
@@ -34,6 +34,7 @@ function App() {
                 setCompanyBeta(data.metric.beta);
                 setCompanyPERatio(data.metric.peTTM);
             });
+            
     }, [run]);
 
     return (
